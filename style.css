@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #f5ce52;
+  --secundary-color: rgba(255, 255, 255, 0.9);
+  --change-btn-color: rgba(0, 212, 255, 0.9);
+  --back-color: rgba(17, 25, 40, 0.25);
+  --drop-color: rgba(0, 0, 0, 0.125);
+  --border-btn-color: rgba(0, 212, 255, 0.6);
+  --input-color:rgba(249, 245, 245, 0.423);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-image: url(./img/Coins-cover.png);
+  background-size: cover;
+  background-position: center;
+  color: var(--secundary-color);
+}
+.container {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: var(--back-color);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 38px;
+  filter: drop-shadow(0 30px 10px var(--drop-color));
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: center;
+}
+h1 {
+  color: var(--primary-color);
+}
+
+p {
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.125);
+  color: var(--secundary-color);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.converter-image {
+  width: 150px;
+}
+
+.currency {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.currency select {
+  padding: 10px 20px 10px 10px;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--back-color);
+  color: var(--secundary-color);
+}
+
+.currency input {
+  border: 0;
+  font-size: 30px;
+  text-align: right;
+  background-color: var(--input-color);
+  color: var(--primary-color);
+}
+
+.exchange-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rate {
+  color: var(--primary-color);
+  font-size: 14px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+@media (max-width: 600px) {
+  .currency input {
+    width: 200px;
+  }
+}
